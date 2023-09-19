@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmnrpngdlaesa"]
+
+[ext_resource type="Script" path="res://Bullet.gd" id="1_cmjw0"]
+[ext_resource type="Material" uid="uid://dw8qeokf0x6ku" path="res://BulletMaterial.tres" id="1_nwdw3"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_cwnrr"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wsi2f"]
+
+[node name="Bullet" type="CharacterBody3D"]
+script = ExtResource("1_cmjw0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+material_override = ExtResource("1_nwdw3")
+mesh = SubResource("CapsuleMesh_cwnrr")
+skeleton = NodePath("../Area3D/CollisionShape3D")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, -1.5, 0, 1.5, -6.55671e-08, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_wsi2f")
