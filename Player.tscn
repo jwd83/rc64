@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://7eyfkn5wu0yd"]
+[gd_scene load_steps=8 format=3 uid="uid://7eyfkn5wu0yd"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_hcaun"]
 [ext_resource type="PackedScene" uid="uid://bmnrpngdlaesa" path="res://Bullet.tscn" id="2_l0o0m"]
 [ext_resource type="Texture2D" uid="uid://bvpxh7hjk4le8" path="res://crosshair1.png" id="4_ido2k"]
 [ext_resource type="Texture2D" uid="uid://b07cap8qcnopd" path="res://crosshair2.png" id="5_4y3c5"]
 [ext_resource type="PackedScene" uid="uid://c05hufohmpsp1" path="res://KenneySpaceKit/craft_speederD.glb" id="5_toxdi"]
+[ext_resource type="PackedScene" uid="uid://b3d6ah3lpn8u" path="res://SmokeTrail.tscn" id="6_c52oe"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qh58s"]
 size = Vector3(6.93409, 1.56025, 3.48146)
@@ -30,3 +31,9 @@ texture = ExtResource("5_4y3c5")
 
 [node name="craft_speederD" parent="." instance=ExtResource("5_toxdi")]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -4.9758, -1.31209, -3.06963)
+
+[node name="SmokeTrail" parent="." instance=ExtResource("6_c52oe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 4)
+
+[node name="SmokeTrail2" parent="." instance=ExtResource("6_c52oe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)

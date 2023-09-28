@@ -18,6 +18,7 @@ sky_material = SubResource("PanoramaSkyMaterial_x3oxl")
 [sub_resource type="Environment" id="Environment_v1iqq"]
 background_mode = 2
 sky = SubResource("Sky_2f5x7")
+glow_enabled = true
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_gwyrw")
@@ -30,9 +31,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -180)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16.161)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.866025, 0.433013, -0.25, 0, 0.5, 0.866025, 0.5, -0.75, 0.433013, -7.96676, 16.7209, 5.56855)
 
 [node name="Ground" type="MeshInstance3D" parent="."]
 transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, -35.1371, 0)
@@ -47,3 +45,15 @@ material_override = ExtResource("4_h1iwu")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_v1iqq")
+
+[node name="Lighting" type="Node3D" parent="."]
+transform = Transform3D(0.866025, 0.433013, -0.25, 0, 0.5, 0.866025, 0.5, -0.75, 0.433013, -7.96676, 16.7209, 5.56855)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(1, -2.98023e-08, 1.49012e-08, 0, 1, -2.98023e-08, 0, 0, 1, 0, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(-0.662582, 0.493362, -0.563541, -0.640994, 0.015692, 0.767385, 0.387442, 0.869683, 0.305845, 0, 0, 0)
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(0.841114, 0.529842, -0.108602, 0.389875, -0.454793, 0.800725, 0.374867, -0.715842, -0.589105, 0, 0, 0)
