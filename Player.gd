@@ -1,13 +1,18 @@
 extends CharacterBody3D
 
 const MAX_SPEED = 30
-const ACCELERATION = 0.75
+const ACCELERATION = 0.65
 var COOLDOWN_RESET = 0.10
 var cooldown = 0
+var bobble : float = 0
 
 var input_vector = Vector3()
 
 @export var BulletScene: PackedScene
+
+func _ready():
+	# move down slightly when we enter the world
+	velocity.y = -20
 
 func _physics_process(delta):
 	
@@ -34,7 +39,7 @@ func _physics_process(delta):
 	# prevent leaving the screen
 	transform.origin.x = clamp(transform.origin.x, -15, 15)
 	transform.origin.y = clamp(transform.origin.y, -10, 10)
-	
+
 	if Input.is_action_pressed("ui_accept") and cooldown <= 0:
 		cooldown = COOLDOWN_RESET
 		var new_bullet = BulletScene.instantiate()

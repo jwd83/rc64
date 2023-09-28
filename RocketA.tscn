@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://blqlnjr34i3u0"]
+
+[ext_resource type="PackedScene" uid="uid://di7p8pua1a0ul" path="res://KenneySpaceKit/rocket_baseA.glb" id="1_sqgwi"]
+[ext_resource type="PackedScene" uid="uid://d4mopubef7p5c" path="res://KenneySpaceKit/rocket_finsA.glb" id="2_p4g57"]
+[ext_resource type="PackedScene" uid="uid://ddruniryo5tep" path="res://KenneySpaceKit/rocket_fuelA.glb" id="3_grrdi"]
+[ext_resource type="PackedScene" uid="uid://clxytca8gfmvw" path="res://KenneySpaceKit/rocket_sidesA.glb" id="4_kbbom"]
+[ext_resource type="PackedScene" uid="uid://45xpwqx314gr" path="res://KenneySpaceKit/rocket_topA.glb" id="5_vhnjg"]
+
+[node name="Rocket" type="Node3D"]
+
+[node name="rocket_baseA" parent="." instance=ExtResource("1_sqgwi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99311, 0, -1.50857)
+
+[node name="rocket_fuelA" parent="." instance=ExtResource("3_grrdi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99311, 1, -1.50857)
+
+[node name="rocket_sidesA" parent="." instance=ExtResource("4_kbbom")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99311, 1.5, -1.50857)
+
+[node name="rocket_finsA" parent="." instance=ExtResource("2_p4g57")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99311, 2.5, -1.50857)
+
+[node name="rocket_topA" parent="." instance=ExtResource("5_vhnjg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99311, 3.2, -1.50857)

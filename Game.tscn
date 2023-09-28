@@ -1,17 +1,29 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvxtuotgjn1cc"]
+[gd_scene load_steps=11 format=3 uid="uid://bvxtuotgjn1cc"]
 
 [ext_resource type="PackedScene" uid="uid://7eyfkn5wu0yd" path="res://Player.tscn" id="1_gqlb7"]
 [ext_resource type="Script" path="res://Game.gd" id="1_gwyrw"]
 [ext_resource type="PackedScene" uid="uid://bsy4bwmvp780b" path="res://EnemySpawner.tscn" id="3_xl3pk"]
 [ext_resource type="Material" uid="uid://c0ovckfae03p1" path="res://GroundMaterial.tres" id="4_h1iwu"]
 [ext_resource type="PackedScene" uid="uid://bwhlek20ndyvk" path="res://TowerScene.tscn" id="5_6k1ph"]
+[ext_resource type="Texture2D" uid="uid://nt8hmtupowkc" path="res://environment.png" id="6_yucsn"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_er8og"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_x3oxl"]
+panorama = ExtResource("6_yucsn")
+
+[sub_resource type="Sky" id="Sky_2f5x7"]
+sky_material = SubResource("PanoramaSkyMaterial_x3oxl")
+
+[sub_resource type="Environment" id="Environment_v1iqq"]
+background_mode = 2
+sky = SubResource("Sky_2f5x7")
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_gwyrw")
 
 [node name="Player" parent="." instance=ExtResource("1_gqlb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.96614, 0)
 
 [node name="EnemySpawner" parent="." instance=ExtResource("3_xl3pk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -180)
@@ -22,11 +34,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16.161)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.866025, 0.433013, -0.25, 0, 0.5, 0.866025, 0.5, -0.75, 0.433013, -7.96676, 16.7209, 5.56855)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Ground" type="MeshInstance3D" parent="."]
 transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, -35.1371, 0)
+visible = false
 material_override = ExtResource("4_h1iwu")
 mesh = SubResource("PlaneMesh_er8og")
 skeleton = NodePath("../Player")
 
-[node name="MeshInstance3D2" parent="." instance=ExtResource("5_6k1ph")]
+[node name="Tower" parent="." instance=ExtResource("5_6k1ph")]
+visible = false
 material_override = ExtResource("4_h1iwu")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_v1iqq")

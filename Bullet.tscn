@@ -1,20 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmnrpngdlaesa"]
+[gd_scene load_steps=4 format=3 uid="uid://bmnrpngdlaesa"]
 
 [ext_resource type="Script" path="res://Bullet.gd" id="1_cmjw0"]
-[ext_resource type="Material" uid="uid://dw8qeokf0x6ku" path="res://BulletMaterial.tres" id="1_nwdw3"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_cwnrr"]
+[ext_resource type="PackedScene" uid="uid://blqlnjr34i3u0" path="res://RocketA.tscn" id="2_x8euf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wsi2f"]
 
 [node name="Bullet" type="CharacterBody3D"]
 script = ExtResource("1_cmjw0")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-material_override = ExtResource("1_nwdw3")
-mesh = SubResource("CapsuleMesh_cwnrr")
-skeleton = NodePath("../Area3D/CollisionShape3D")
 
 [node name="Area3D" type="Area3D" parent="."]
 
@@ -27,5 +19,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.902238, 0)
 light_energy = 14.554
 light_size = 1.0
 omni_range = 17.831
+
+[node name="Rocket" parent="." instance=ExtResource("2_x8euf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

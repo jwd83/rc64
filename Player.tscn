@@ -1,19 +1,17 @@
 [gd_scene load_steps=7 format=3 uid="uid://7eyfkn5wu0yd"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_hcaun"]
-[ext_resource type="PackedScene" uid="uid://cvfgxawqj5qj6" path="res://Blender Imports/player.gltf" id="1_umlrk"]
 [ext_resource type="PackedScene" uid="uid://bmnrpngdlaesa" path="res://Bullet.tscn" id="2_l0o0m"]
 [ext_resource type="Texture2D" uid="uid://bvpxh7hjk4le8" path="res://crosshair1.png" id="4_ido2k"]
 [ext_resource type="Texture2D" uid="uid://b07cap8qcnopd" path="res://crosshair2.png" id="5_4y3c5"]
+[ext_resource type="PackedScene" uid="uid://c05hufohmpsp1" path="res://KenneySpaceKit/craft_speederD.glb" id="5_toxdi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qh58s"]
-size = Vector3(8.74257, 1.56025, 3.48146)
+size = Vector3(6.93409, 1.56025, 3.48146)
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_hcaun")
 BulletScene = ExtResource("2_l0o0m")
-
-[node name="PlayerModel" parent="." instance=ExtResource("1_umlrk")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.403314)
@@ -23,9 +21,12 @@ shape = SubResource("BoxShape3D_qh58s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.82081)
 
 [node name="Crosshair1" type="Sprite3D" parent="."]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -60)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -90)
 texture = ExtResource("4_ido2k")
 
 [node name="Crosshair2" type="Sprite3D" parent="."]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -90)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, -180)
 texture = ExtResource("5_4y3c5")
+
+[node name="craft_speederD" parent="." instance=ExtResource("5_toxdi")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -4.9758, -1.31209, -3.06963)

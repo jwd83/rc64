@@ -1,0 +1,120 @@
+[gd_scene load_steps=25 format=3 uid="uid://7yi0ny4dltg6"]
+
+[ext_resource type="PackedScene" uid="uid://k05bvtgaeohv" path="res://KenneySpaceKit/satelliteDish.glb" id="1_q8gso"]
+[ext_resource type="PackedScene" uid="uid://2luro8xqqg2" path="res://KenneySpaceKit/satelliteDish_detailed.glb" id="2_2uu7k"]
+[ext_resource type="PackedScene" uid="uid://dsbg2wwyjhu23" path="res://KenneySpaceKit/satelliteDish_large.glb" id="3_jqpcr"]
+[ext_resource type="PackedScene" uid="uid://botfy4js2hd1v" path="res://KenneySpaceKit/structure_closed.glb" id="4_mc647"]
+[ext_resource type="PackedScene" uid="uid://4cp070c820qt" path="res://KenneySpaceKit/structure_detailed.glb" id="5_jj5c1"]
+[ext_resource type="PackedScene" uid="uid://bp4u18w7ikocn" path="res://KenneySpaceKit/weapon_gun.glb" id="6_esdtd"]
+[ext_resource type="PackedScene" uid="uid://dadbad0a08g51" path="res://KenneySpaceKit/weapon_rifle.glb" id="7_ruofk"]
+[ext_resource type="PackedScene" uid="uid://blh5q0v2hhy07" path="res://KenneySpaceKit/pipe_rampSmall.glb" id="8_0bpkm"]
+[ext_resource type="PackedScene" uid="uid://bhomas4vjfuvw" path="res://KenneySpaceKit/monorail_trackSlope.glb" id="9_mcclo"]
+[ext_resource type="PackedScene" uid="uid://bjh7ckntdf25l" path="res://KenneySpaceKit/monorail_trackSupportCorner.glb" id="10_rpn7u"]
+[ext_resource type="PackedScene" uid="uid://bu86jgm7snggx" path="res://KenneySpaceKit/monorail_trainCargo.glb" id="11_rdf48"]
+[ext_resource type="PackedScene" uid="uid://c2y734eftstqf" path="res://KenneySpaceKit/meteor_half.glb" id="12_0u4ms"]
+[ext_resource type="PackedScene" uid="uid://gsusrgqle3cn" path="res://KenneySpaceKit/meteor_detailed.glb" id="13_a60dk"]
+[ext_resource type="PackedScene" uid="uid://dv1cdb2y8raef" path="res://KenneySpaceKit/meteor.glb" id="14_hcrbl"]
+[ext_resource type="PackedScene" uid="uid://dc443bmija1yq" path="res://KenneySpaceKit/hangar_largeA.glb" id="15_7twd0"]
+[ext_resource type="PackedScene" uid="uid://dh7vnrab6vs11" path="res://KenneySpaceKit/hangar_largeB.glb" id="16_plmym"]
+[ext_resource type="PackedScene" uid="uid://cfcjqa2fkkhhd" path="res://KenneySpaceKit/craft_speederA.glb" id="17_0ybfh"]
+[ext_resource type="PackedScene" uid="uid://cdnstsye0m2rb" path="res://KenneySpaceKit/craft_speederB.glb" id="18_ygrfq"]
+[ext_resource type="PackedScene" uid="uid://jtbytjbavnki" path="res://KenneySpaceKit/craft_speederC.glb" id="19_pq6d6"]
+[ext_resource type="PackedScene" uid="uid://c05hufohmpsp1" path="res://KenneySpaceKit/craft_speederD.glb" id="20_cu3mk"]
+[ext_resource type="PackedScene" uid="uid://qybo8rne3pm8" path="res://KenneySpaceKit/craft_cargoA.glb" id="21_8ls62"]
+[ext_resource type="PackedScene" uid="uid://coeta887fufca" path="res://KenneySpaceKit/craft_cargoB.glb" id="22_q4ynu"]
+[ext_resource type="PackedScene" uid="uid://r2f6dnpjvuw3" path="res://KenneySpaceKit/craft_miner.glb" id="23_e2p6e"]
+[ext_resource type="PackedScene" uid="uid://dals10wgthpqs" path="res://KenneySpaceKit/craft_racer.glb" id="24_b8rql"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="satelliteDish" parent="." instance=ExtResource("1_q8gso")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00594532, 0, 0.0872302)
+
+[node name="satelliteDish_detailed" parent="." instance=ExtResource("2_2uu7k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.817178, 0, 0.539152)
+
+[node name="satelliteDish_large" parent="." instance=ExtResource("3_jqpcr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.46493, 0, 0.266298)
+
+[node name="structure_closed" parent="." instance=ExtResource("4_mc647")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.08279, 0, -3.08596)
+
+[node name="structure_detailed" parent="." instance=ExtResource("5_jj5c1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.294114, 0, -3.65677)
+
+[node name="weapon_gun" parent="." instance=ExtResource("6_esdtd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8918, 0, -3.48982)
+
+[node name="weapon_rifle" parent="." instance=ExtResource("7_ruofk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.01273, 0, -3.67069)
+
+[node name="pipe_rampSmall" parent="." instance=ExtResource("8_0bpkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.55307, 0, -1.80382)
+
+[node name="monorail_trackSlope" parent="." instance=ExtResource("9_mcclo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.38201, 4.76837e-07, -1.67574)
+
+[node name="monorail_trackSupportCorner" parent="." instance=ExtResource("10_rpn7u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.91568, -4.76837e-07, -2.36661)
+
+[node name="monorail_trainCargo" parent="." instance=ExtResource("11_rdf48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71368, 0, -3.76254)
+
+[node name="meteor_half" parent="." instance=ExtResource("12_0u4ms")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71878, 0, -4.02039)
+
+[node name="meteor_detailed" parent="." instance=ExtResource("13_a60dk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7067, 0, -1.6621)
+
+[node name="meteor" parent="." instance=ExtResource("14_hcrbl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90274, 0, -1.89759)
+
+[node name="hangar_largeA" parent="." instance=ExtResource("15_7twd0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.61569, 0, 2.18534)
+
+[node name="hangar_largeB" parent="." instance=ExtResource("16_plmym")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.93561, 0, -2.74217)
+
+[node name="craft_speederA" parent="." instance=ExtResource("17_0ybfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.476851, 0, -8.5254)
+
+[node name="craft_speederB" parent="." instance=ExtResource("18_ygrfq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.18034, -4.76837e-07, -8.0214)
+
+[node name="craft_speederC" parent="." instance=ExtResource("19_pq6d6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.17627, 0, -8.59025)
+
+[node name="craft_speederD" parent="." instance=ExtResource("20_cu3mk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.34465, 0, -8.43502)
+
+[node name="Lighting" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.140642, 0.990061, 0, -0.990061, -0.140642, 0, 0, 10.0529)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 0.642881, 0.765966, 0, -0.765966, 0.642881, 0, 0, 0)
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 0.176191, -0.984356, 0, 0.984356, 0.176191, 0, 0, 0)
+
+[node name="DirectionalLight3D4" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(0.482809, 0.831757, 0.273999, 0.123164, 0.245278, -0.961597, -0.867022, 0.498014, 0.01598, 0, 0, 0)
+
+[node name="DirectionalLight3D5" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(-0.545327, 0.0168966, -0.838053, -0.826855, 0.15326, 0.541131, 0.137583, 0.988041, -0.0696058, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.804687, 0.5937, 0, -0.5937, 0.804687, 0, 3.51307, 14.5508)
+
+[node name="craft_cargoA" parent="." instance=ExtResource("21_8ls62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6022, 0, 6.76413)
+
+[node name="craft_cargoB" parent="." instance=ExtResource("22_q4ynu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8059, 0, -5.41018)
+
+[node name="craft_miner" parent="." instance=ExtResource("23_e2p6e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.47484, 0, -11.6106)
+
+[node name="craft_racer" parent="." instance=ExtResource("24_b8rql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.50801, 0, -13.7126)
