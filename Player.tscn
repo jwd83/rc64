@@ -33,7 +33,7 @@ texture = ExtResource("5_4y3c5")
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -4.9758, -1.31209, -3.06963)
 
 [node name="SmokeTrail" parent="." instance=ExtResource("6_c52oe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.950701, -0.2952, 3.57463)
 
 [node name="SmokeTrail2" parent="." instance=ExtResource("6_c52oe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.245181, 3.64091)

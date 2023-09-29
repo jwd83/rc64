@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfq28nbvya0bs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dqc6"]
+shading_mode = 0
+grow_amount = 1.0
+proximity_fade_distance = 95.38
+
+[sub_resource type="Gradient" id="Gradient_vnxp6"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_gykg7"]
+gradient = SubResource("Gradient_vnxp6")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qj2j4"]
+direction = Vector3(0, 0, 1)
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 60.0
+initial_velocity_max = 120.0
+color_ramp = SubResource("GradientTexture1D_gykg7")
+attractor_interaction_enabled = false
+
+[sub_resource type="SphereMesh" id="SphereMesh_aj3ta"]
+radial_segments = 8
+rings = 8
+
+[node name="StarfieldEmitter" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+material_override = SubResource("StandardMaterial3D_2dqc6")
+cast_shadow = 0
+gi_mode = 0
+amount = 500
+lifetime = 10.0
+preprocess = 11.01
+speed_scale = 4.86
+fixed_fps = 120
+collision_base_size = 0.0
+visibility_aabb = AABB(-4, -3.4859, -11.4471, 8, 36.3168, 25.2684)
+process_material = SubResource("ParticleProcessMaterial_qj2j4")
+draw_passes = 2
+draw_pass_1 = SubResource("SphereMesh_aj3ta")
+draw_pass_2 = null

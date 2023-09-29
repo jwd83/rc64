@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://7yi0ny4dltg6"]
+[gd_scene load_steps=30 format=3 uid="uid://7yi0ny4dltg6"]
 
 [ext_resource type="PackedScene" uid="uid://k05bvtgaeohv" path="res://KenneySpaceKit/satelliteDish.glb" id="1_q8gso"]
 [ext_resource type="PackedScene" uid="uid://2luro8xqqg2" path="res://KenneySpaceKit/satelliteDish_detailed.glb" id="2_2uu7k"]
@@ -24,6 +24,11 @@
 [ext_resource type="PackedScene" uid="uid://coeta887fufca" path="res://KenneySpaceKit/craft_cargoB.glb" id="22_q4ynu"]
 [ext_resource type="PackedScene" uid="uid://r2f6dnpjvuw3" path="res://KenneySpaceKit/craft_miner.glb" id="23_e2p6e"]
 [ext_resource type="PackedScene" uid="uid://dals10wgthpqs" path="res://KenneySpaceKit/craft_racer.glb" id="24_b8rql"]
+[ext_resource type="PackedScene" uid="uid://bwht33ryxpn78" path="res://KenneySpaceKit/rock.glb" id="25_l22fx"]
+[ext_resource type="PackedScene" uid="uid://b052tyd5yi8xt" path="res://KenneySpaceKit/rock_crystals.glb" id="26_blbpv"]
+[ext_resource type="PackedScene" uid="uid://dnv1b51hfscpu" path="res://KenneySpaceKit/rock_crystalsLargeA.glb" id="27_wo1qa"]
+[ext_resource type="PackedScene" uid="uid://cxcutxweyo05t" path="res://KenneySpaceKit/turret_double.glb" id="28_pedol"]
+[ext_resource type="PackedScene" uid="uid://b0282yrg24hf5" path="res://KenneySpaceKit/bones.glb" id="29_sg144"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -118,3 +123,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.47484, 0, -11.6106)
 
 [node name="craft_racer" parent="." instance=ExtResource("24_b8rql")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.50801, 0, -13.7126)
+
+[node name="meteor2" parent="." instance=ExtResource("14_hcrbl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5243, 0, 9.27375)
+
+[node name="rock" parent="." instance=ExtResource("25_l22fx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9952, -9.53674e-07, 5.0589)
+
+[node name="rock_crystals" parent="." instance=ExtResource("26_blbpv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0406, 0, 2.52898)
+
+[node name="rock_crystalsLargeA" parent="." instance=ExtResource("27_wo1qa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1496, 0, 4.38318)
+
+[node name="turret_double" parent="." instance=ExtResource("28_pedol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.30657, 0, -0.950916)
+
+[node name="bones" parent="." instance=ExtResource("29_sg144")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3377, 0, -11.2765)

@@ -2,18 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://7eyfkn5wu0yd" path="res://Player.tscn" id="1_gqlb7"]
 [ext_resource type="Script" path="res://Game.gd" id="1_gwyrw"]
+[ext_resource type="PackedScene" uid="uid://bfq28nbvya0bs" path="res://StarfieldEmitter.tscn" id="2_7ts1p"]
 [ext_resource type="PackedScene" uid="uid://bsy4bwmvp780b" path="res://EnemySpawner.tscn" id="3_xl3pk"]
 [ext_resource type="Material" uid="uid://c0ovckfae03p1" path="res://GroundMaterial.tres" id="4_h1iwu"]
 [ext_resource type="PackedScene" uid="uid://bwhlek20ndyvk" path="res://TowerScene.tscn" id="5_6k1ph"]
-[ext_resource type="Texture2D" uid="uid://nt8hmtupowkc" path="res://environment.png" id="6_yucsn"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_er8og"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_x3oxl"]
-panorama = ExtResource("6_yucsn")
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_xv4ei"]
 
 [sub_resource type="Sky" id="Sky_2f5x7"]
-sky_material = SubResource("PanoramaSkyMaterial_x3oxl")
+sky_material = SubResource("PanoramaSkyMaterial_xv4ei")
 
 [sub_resource type="Environment" id="Environment_v1iqq"]
 background_mode = 2
@@ -22,6 +21,9 @@ glow_enabled = true
 
 [node name="Game" type="Node3D"]
 script = ExtResource("1_gwyrw")
+
+[node name="StarfieldEmitter" parent="." instance=ExtResource("2_7ts1p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -681.197)
 
 [node name="Player" parent="." instance=ExtResource("1_gqlb7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.96614, 0)

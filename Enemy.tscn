@@ -1,15 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://dp4toecglk07h"]
+[gd_scene load_steps=5 format=3 uid="uid://dp4toecglk07h"]
 
 [ext_resource type="Script" path="res://Enemy.gd" id="1_8kmgg"]
-[ext_resource type="PackedScene" uid="uid://cxp6eu2dkot08" path="res://Blender Imports/enemy.gltf" id="1_d2unr"]
+[ext_resource type="PackedScene" uid="uid://qybo8rne3pm8" path="res://KenneySpaceKit/craft_cargoA.glb" id="3_feukn"]
+[ext_resource type="PackedScene" uid="uid://coeta887fufca" path="res://KenneySpaceKit/craft_cargoB.glb" id="4_q5tqh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ygmjp"]
-size = Vector3(4, 3, 4)
+size = Vector3(19.4916, 10.4687, 35.6428)
 
 [node name="Enemy" type="CharacterBody3D" groups=["Enemies"]]
 script = ExtResource("1_8kmgg")
 
-[node name="enemy" parent="." instance=ExtResource("1_d2unr")]
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.118484, -0.853307, 9.89085)
 shape = SubResource("BoxShape3D_ygmjp")
+
+[node name="craft_cargoA" parent="." instance=ExtResource("3_feukn")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -15.4926, -4.7171, 5.96931)
+
+[node name="craft_cargoB" parent="." instance=ExtResource("4_q5tqh")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -11.8832, -2.47354, -7.95025)
